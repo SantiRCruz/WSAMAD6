@@ -34,5 +34,8 @@
         android:id="@+id/checkListFragment"
         android:name="com.example.wsamad6.ui.CheckListFragment"
         android:label="fragment_check_list"
-        tools:layout="@layout/fragment_check_list" />
+        tools:layout="@layout/fragment_check_list" >
+        <argument android:name="date"
+            app:argType="string" />
+    </fragment>
 </navigation>

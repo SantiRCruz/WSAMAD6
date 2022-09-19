@@ -24,4 +24,16 @@
     <string name="you_need_to_have_access_to_internet">You need to have access to internet</string>
     <string name="try_again">Try Again</string>
     <string name="use_this_qr_code_in_restaraunts_and_aerports_nyou_can_t_give_it_to_anyone_else">Use this QR-code in restaraunts and aerports\nYou can’t give it to anyone else</string>
+    <string name="checklist">Checklist</string>
+    <string name="have_you_had_any_of_the_following_nsymptoms_in_the_last_24_hours">Have you had any of the following\nsymptoms in the last 24 hours ?</string>
+    <string name="confirm">Confirm</string>
+    <string name="add_your_photo_for_check_you_health_nwith_neural_networks">Add your photo for check you health\nwith neural networks</string>
+    <string name="don_t_want_to_answer_for_now">Don’t want to answer for now.</string>
+    <string name="choose_a_option">Choose a option</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="loading">Loading...</string>
+    <string name="qr">Qr</string>
+    <string name="map">Map</string>
+    <string name="home">Home</string>
 </resources>

@@ -43,7 +43,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private fun clicks() {
         binding.imgQr.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_qrFragment) }
         binding.imgMap.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_mapFragment) }
-        binding.btnCheck.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_checkListFragment) }
+        binding.btnCheck.setOnClickListener { findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToCheckListFragment(binding.txtActualDate.text.toString())) }
     }
 
     private fun obtainHistory() {
@@ -83,7 +83,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 }else{
                     requireActivity().runOnUiThread {
                         binding.llNoData.visibility = View.VISIBLE
-                        binding.llNoData.visibility = View.VISIBLE
+                        binding.llNoData1.visibility = View.VISIBLE
                     }
                 }
             }

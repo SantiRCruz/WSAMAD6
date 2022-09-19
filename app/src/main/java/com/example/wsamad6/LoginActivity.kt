@@ -6,12 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.core.widget.addTextChangedListener
 import com.example.wsamad6.core.Constants
 import com.example.wsamad6.core.networkInfo
 import com.example.wsamad6.data.post
 import com.example.wsamad6.data.signIn
 import com.example.wsamad6.databinding.ActivityLoginBinding
-import com.example.wsamad6.databinding.ActivityMainBinding
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.Response
@@ -29,8 +29,25 @@ class LoginActivity : AppCompatActivity() {
         this.supportActionBar?.hide()
 
         clicks()
+        writing()
 
+    }
 
+    private fun writing() {
+        emailWriting()
+    }
+
+    private fun emailWriting() {
+        binding.edtEmail.addTextChangedListener {
+        val regex = Pattern.compile("^([a-zA-Z@.]{3,17})")
+            if (!regex.matcher(it!!).matches()){
+                binding.edtEmail.error = "The emails is not min 10 and max 15 words"
+                binding.btnSignIn.isEnabled = false
+            }else{
+                binding.edtEmail.error = null
+                binding.btnSignIn.isEnabled = true
+            }
+        }
     }
 
     private fun clicks() {
